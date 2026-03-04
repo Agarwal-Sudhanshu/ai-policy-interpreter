@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Policy Interpreter | Machine-Readable Credit Policy Logic</title>
+  <meta name="description" content="AI Policy Interpreter converts credit policies, underwriting rules, SOPs, and compliance documents into machine-readable logic, decision trees, and explainable outputs for banks, NBFCs, and fintech lenders." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">AI</span>
+        <span class="logo-text">
+          <span class="logo-title">Policy Interpreter</span>
+          <span class="logo-subtitle">Credit & Risk Logic Infrastructure</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a href="#solution">Product</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#use-cases">Use Cases</a>
+        <a href="#deployment">Deployment</a>
+        <a href="#security">Security</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-ghost">Download Brochure</a>
+        <a href="#contact" class="btn btn-primary">Book Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Turn credit policies into machine-readable decision logic.</h1>
+          <p class="hero-subtitle">
+            AI Policy Interpreter converts underwriting policies, compliance documents, and SOPs into structured rules,
+            decision trees, and explainable outputs your risk teams can validate, version, and deploy via API.
+          </p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">Book Demo</a>
+            <a href="#contact" class="btn btn-ghost">Download Brochure</a>
+          </div>
+          <div class="hero-badges">
+            <span>Banks & NBFCs</span>
+            <span>Fintech Lenders</span>
+            <span>Credit & Risk Teams</span>
+          </div>
+          <ul class="hero-bullets">
+            <li><span class="bullet-title">Policy-to-logic in days</span><span class="bullet-body">Accelerate rule configuration and product launches without rewriting your risk framework.</span></li>
+            <li><span class="bullet-title">Explainable, audit-ready outputs</span><span class="bullet-body">Trace every decision path back to originating clauses and documents.</span></li>
+            <li><span class="bullet-title">Enterprise-grade deployment</span><span class="bullet-body">SaaS (PII-free), private cloud, or on-prem with RBAC and audit trails.</span></li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-diagram">
+            <div class="diagram-column">
+              <h3>Inputs</h3>
+              <ul>
+                <li>Credit Policy PDFs</li>
+                <li>Underwriting SOPs</li>
+                <li>Compliance Circulars</li>
+              </ul>
+            </div>
+            <div class="diagram-column diagram-middle">
+              <h3>Interpreter</h3>
+              <ul>
+                <li>Clause Extraction</li>
+                <li>Rule Structuring</li>
+                <li>Exception Handling</li>
+              </ul>
+            </div>
+            <div class="diagram-column">
+              <h3>Outputs</h3>
+              <ul>
+                <li>Decision Trees</li>
+                <li>Rule Payloads</li>
+                <li>API Schemas</li>
+              </ul>
+            </div>
+          </div>
+          <div class="trust-strip">
+            <span>ISO-aligned controls</span>
+            <span>Encryption in transit & at rest</span>
+            <span>RBAC + audit trails</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="section section-alt">
+      <div class="container">
+        <h2>Policy interpretation should not be a bottleneck.</h2>
+        <p class="section-intro">
+          Lending policies evolve quickly. Translating them into operational, governed logic is where timelines and risk
+          accumulate.
+        </p>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Manual, fragmented interpretation</h3>
+            <p>
+              Credit, policy, and product teams re-interpret the same PDFs and circulars across products, geographies,
+              and channels—creating inconsistency and avoidable rework.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Ambiguity in implementation</h3>
+            <p>
+              The same clause is implemented differently by different squads and vendors, leading to variance in
+              underwriting, exception handling, and customer outcomes.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Audit & compliance exposure</h3>
+            <p>
+              When rationale lives in spreadsheets and email chains, producing a defensible trail from policy to decision
+              is slow, incomplete, and high-risk.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Slow launches & key-person risk</h3>
+            <p>
+              Product cycles wait on scarce policy SMEs. Knowledge concentrates with a few individuals, creating
+              continuity and operational risk for the institution.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>From policy PDFs to governed, deployable decision logic.</h2>
+          <p class="section-intro">
+            AI Policy Interpreter provides an end-to-end pipeline to convert complex policy text into structured,
+            explainable rules that can be validated, versioned, and deployed.
+          </p>
+        </div>
+        <div class="workflow-inline">
+          <div class="workflow-step">
+            <h3>1. Upload policy</h3>
+            <p>Securely ingest credit policies, SOPs, circulars, and addendums into a governed workspace.</p>
+          </div>
+          <div class="workflow-arrow">→</div>
+          <div class="workflow-step">
+            <h3>2. AI parses</h3>
+            <p>Extract clauses, definitions, thresholds, and exceptions while normalizing terminology.</p>
+          </div>
+          <div class="workflow-arrow">→</div>
+          <div class="workflow-step">
+            <h3>3. Structured logic</h3>
+            <p>Transform narrative text into deterministic rules, data requirements, and decision paths.</p>
+          </div>
+          <div class="workflow-arrow">→</div>
+          <div class="workflow-step">
+            <h3>4. API-ready output</h3>
+            <p>Export decision trees and rule payloads that align with your LOS, LMS, and decision engines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="section section-alt">
+      <div class="container">
+        <h2>Designed for credit, risk, and policy teams.</h2>
+        <div class="grid grid-3">
+          <div class="card feature-card">
+            <h3>Policy Parsing Engine</h3>
+            <p>
+              Ingest PDFs and structured documents, detect sections, clauses, tables, and annexures, and normalize
+              credit attributes for downstream rules.
+            </p>
+          </div>
+          <div class="card feature-card">
+            <h3>AI Rule Structuring</h3>
+            <p>
+              Convert narrative policy language into rule components—eligibility, cut-offs, exceptions, precedence logic,
+              and required inputs.
+            </p>
+          </div>
+          <div class="card feature-card">
+            <h3>Explainable Decision Trees</h3>
+            <p>
+              Generate decision trees where each node is traceable back to the originating clause and supporting policy
+              text for complete explainability.
+            </p>
+          </div>
+          <div class="card feature-card">
+            <h3>Version Control & Audit Trail</h3>
+            <p>
+              Maintain a governed history of policy versions, rule changes, approvers, and rationales with diff views and
+              exportable logs.
+            </p>
+          </div>
+          <div class="card feature-card">
+            <h3>API Integration Ready Output</h3>
+            <p>
+              Export schemas, rule payloads, and decision tree structures that integrate cleanly with internal services,
+              decision engines, and partner systems.
+            </p>
+          </div>
+          <div class="card feature-card">
+            <h3>Sandbox Simulation</h3>
+            <p>
+              Run scenarios and sample profiles through the interpreted logic before deployment to identify gaps and
+              edge cases early.
+            </p>
+          </div>
+          <div class="card feature-card">
+            <h3>Role-Based Access</h3>
+            <p>
+              Configure granular access for policy authors, risk owners, validators, and engineers to align with
+              segregation-of-duties requirements.
+            </p>
+          </div>
+          <div class="card feature-card">
+            <h3>Private LLM Deployment Option</h3>
+            <p>
+              Run the interpreter within your private cloud or on-prem environment for sensitive or regulated workloads.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Workflow Section -->
+    <section id="workflow" class="section">
+      <div class="container">
+        <h2>Product workflow: from document to decision API.</h2>
+        <ol class="workflow-list">
+          <li>
+            <span class="step-label">1. Upload policy PDF</span>
+            <p>Add policies, addendums, and SOPs into a controlled workspace with access policies.</p>
+          </li>
+          <li>
+            <span class="step-label">2. AI extracts clauses</span>
+            <p>Identify clauses, definitions, thresholds, and exceptions and map them to standardized entities.</p>
+          </li>
+          <li>
+            <span class="step-label">3. Convert into structured decision logic</span>
+            <p>Generate rules, decision paths, and data requirements in a consistent, machine-readable format.</p>
+          </li>
+          <li>
+            <span class="step-label">4. Human validation layer</span>
+            <p>Risk and policy owners validate interpretations, resolve ambiguities, and approve releases.</p>
+          </li>
+          <li>
+            <span class="step-label">5. Deploy via API</span>
+            <p>Promote approved logic to dev, UAT, and production via API-ready outputs and versioned releases.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="section section-alt">
+      <div class="container">
+        <h2>Use cases across credit, risk, and compliance.</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Credit underwriting automation</h3>
+            <p>
+              Keep automated decisions aligned with current policy while reducing variance across channels, partners, and
+              systems.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Internal policy validation</h3>
+            <p>
+              Detect gaps, overlaps, and conflicting clauses before they reach implementation or customer-facing systems.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Regulatory audit preparation</h3>
+            <p>
+              Produce a clear mapping from policy clause to implemented rule and sample decisions for inspections and
+              internal audits.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Product rule configuration</h3>
+            <p>
+              Launch new products, cohorts, and programs faster with a structured way to configure and test rule changes.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Vendor evaluation</h3>
+            <p>
+              Benchmark external decision engines and underwriting vendors by comparing how they interpret the same
+              policy set.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deployment Models Section -->
+    <section id="deployment" class="section">
+      <div class="container">
+        <h2>Deployment models for regulated institutions.</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>SaaS (PII-free)</h3>
+            <p>
+              Use the cloud service for non-PII workflows and evaluation. Keep sensitive customer data in your core
+              systems while interpreting policy documents.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Private Cloud</h3>
+            <p>
+              Deploy into your own cloud environment with your identity, logging, and network controls for stricter data
+              governance.
+            </p>
+          </div>
+          <div class="card">
+            <h3>On-Premise</h3>
+            <p>
+              For banks and institutions requiring full infrastructure control and data residency within their own
+              environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Differentiation Section -->
+    <section id="differentiation" class="section section-alt">
+      <div class="container">
+        <h2>Why AI Policy Interpreter.</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Beyond manual interpretation</h3>
+            <p>
+              Replace fragmented, person-dependent interpretation with a governed, repeatable pipeline from document to
+              logic.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Beyond traditional rule engines</h3>
+            <p>
+              Rule engines execute logic; AI Policy Interpreter focuses on converting policy text into that logic with
+              traceability and governance.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Beyond generic LLM tools</h3>
+            <p>
+              Move from free-form text answers to deterministic, reviewable rule structures aligned with audit and model
+              risk requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Compliance Section -->
+    <section id="security" class="section">
+      <div class="container">
+        <h2>Security and compliance by design.</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>ISO-aligned architecture</h3>
+            <p>
+              Controls and operational practices aligned with common ISO 27001 principles for access, logging, and change
+              management.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Data encryption</h3>
+            <p>
+              Encryption in transit and at rest with managed key practices aligned to enterprise security standards.
+            </p>
+          </div>
+          <div class="card">
+            <h3>PII-safe processing</h3>
+            <p>
+              Support for PII-minimized workflows and deployment models that respect data residency and internal
+              guidelines.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Audit logs</h3>
+            <p>
+              Activity logs for uploads, edits, approvals, exports, and deployments, supporting internal and external
+              oversight.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section id="contact" class="section section-cta">
+      <div class="container cta-grid">
+        <div class="cta-copy">
+          <h2>Bring policy, risk, and engineering onto a single governed pipeline.</h2>
+          <p>
+            Explore how AI Policy Interpreter can support your underwriting, policy operations, and compliance teams with
+            a controlled path from document to decision logic.
+          </p>
+          <div class="cta-actions">
+            <a href="#contact" class="btn btn-primary">Book Strategy Call</a>
+            <a href="#contact" class="btn btn-ghost">Request Pilot</a>
+          </div>
+          <ul class="cta-bullets">
+            <li>Align on scope, integration points, and governance.</li>
+            <li>Validate accuracy and workflow fit on a pilot policy set.</li>
+          </ul>
+        </div>
+        <div class="cta-form">
+          <form>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name" />
+            </div>
+            <div class="form-row">
+              <label for="company">Institution</label>
+              <input id="company" type="text" placeholder="Bank / NBFC / Fintech" />
+            </div>
+            <div class="form-row">
+              <label for="role">Role</label>
+              <input id="role" type="text" placeholder="Risk / Policy / Technology" />
+            </div>
+            <div class="form-row">
+              <label for="email">Work email</label>
+              <input id="email" type="email" placeholder="you@institution.com" />
+            </div>
+            <div class="form-row">
+              <label for="message">Context</label>
+              <textarea id="message" rows="4" placeholder="Share current underwriting or policy challenges."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit inquiry</button>
+            <p class="form-footnote">By submitting, you agree to be contacted about this inquiry.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark">AI</span>
+          <span class="logo-text">
+            <span class="logo-title">Policy Interpreter</span>
+          </span>
+        </div>
+        <p>AI infrastructure for policy-to-logic conversion in credit and risk decisioning.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Product</h4>
+          <a href="#solution">Overview</a>
+          <a href="#features">Features</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#deployment">Deployment</a>
+        </div>
+        <div>
+          <h4>Solutions</h4>
+          <a href="#use-cases">Underwriting</a>
+          <a href="#use-cases">Policy Ops</a>
+          <a href="#use-cases">Compliance</a>
+          <a href="#use-cases">Technology</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Privacy</a>
+          <a href="#contact">Terms</a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:sales@yourdomain.com">sales@yourdomain.com</a></p>
+        <p>Available for global BFSI teams.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AI Policy Interpreter. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
