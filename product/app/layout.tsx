@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { AuthProvider } from "@/components/AuthProvider";
+import { AppShell } from "@/components/AppShell";
+import { SessionLoading } from "@/components/SessionLoading";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,7 +20,7 @@ export const metadata: Metadata = {
   description: "Upload a credit policy PDF and extract rules using AI.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -27,7 +30,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>
+          <SessionLoading />
+          <AppShell>{children}</AppShell>
+        </AuthProvider>
       </body>
     </html>
   );
