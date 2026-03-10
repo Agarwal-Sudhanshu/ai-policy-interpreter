@@ -14,25 +14,25 @@ export function NavHeader() {
       <nav className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-3">
         <div className="flex flex-wrap items-center gap-4 text-sm font-medium">
           <Link
-            href="/organizations"
+            href="/app/organizations"
             className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
           >
             Organizations
           </Link>
           <Link
-            href="/products"
+            href="/app/products"
             className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
           >
             Products
           </Link>
           <Link
-            href="/policies"
+            href="/app/policies"
             className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
           >
             Policies
           </Link>
           <Link
-            href="/upload-policy"
+            href="/app/upload"
             className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
           >
             Upload Policy

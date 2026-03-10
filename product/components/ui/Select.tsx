@@ -1,5 +1,5 @@
-const selectClass =
-  "w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 disabled:opacity-50";
+export const selectClass =
+  "w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/20 disabled:opacity-50";
 
 type SelectOption = { value: string; label: string };
 

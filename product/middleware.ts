@@ -3,11 +3,14 @@ import { createServerClient } from "@supabase/ssr";
 
 const INTERNAL_SECRET_HEADER = "x-internal-secret";
 
-// Guest mode: only these paths require authentication (redirect to /login if no user)
-const AUTH_REQUIRED_PAGE_PREFIXES = [
-  "/organizations",
-  "/products",
-  "/upload-policy",
+// Legacy URL redirects (preserve bookmarks and shared links)
+const LEGACY_REDIRECTS: [string, string][] = [
+  ["/dashboard", "/app/dashboard"],
+  ["/organizations", "/app/organizations"],
+  ["/products", "/app/products"],
+  ["/upload-policy", "/app/upload"],
+  ["/policies/create", "/app/policies/create"],
+  ["/explore/policies", "/policies"],
 ];
 const AUTH_REQUIRED_API_PATHS = ["/api/upload-policy"];
 const INTERNAL_API_PATHS = [
@@ -18,14 +21,20 @@ const INTERNAL_API_PATHS = [
 const AUTH_PATHS = ["/login", "/signup"];
 const INNGEST_PATH = "/api/inngest";
 
+function getLegacyRedirect(pathname: string): string | null {
+  for (const [legacy, target] of LEGACY_REDIRECTS) {
+    if (pathname === legacy || pathname.startsWith(`${legacy}/`)) {
+      return pathname === legacy ? target : pathname.replace(legacy, target);
+    }
+  }
+  return null;
+}
+
 function isAuthRequiredPage(pathname: string): boolean {
   if (AUTH_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`)))
     return false;
-  if (pathname === "/policies/create" || pathname.startsWith("/policies/create/"))
-    return true;
-  return AUTH_REQUIRED_PAGE_PREFIXES.some(
-    (p) => pathname === p || pathname.startsWith(`${p}/`)
-  );
+  if (pathname.startsWith("/app/")) return true;
+  return false;
 }
 
 function isAuthRequiredApi(pathname: string): boolean {
@@ -53,6 +62,13 @@ function isAuthPath(pathname: string): boolean {
 export async function middleware(request: NextRequest) {
   try {
   const pathname = request.nextUrl.pathname;
+  const legacyTarget = getLegacyRedirect(pathname);
+  if (legacyTarget) {
+    const url = request.nextUrl.clone();
+    url.pathname = legacyTarget;
+    return NextResponse.redirect(url);
+  }
+
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
@@ -91,7 +107,7 @@ export async function middleware(request: NextRequest) {
 
   if (isAuthPath(pathname) && user) {
     const url = request.nextUrl.clone();
-    url.pathname = "/dashboard";
+    url.pathname = "/app/dashboard";
     return NextResponse.redirect(url);
   }
 

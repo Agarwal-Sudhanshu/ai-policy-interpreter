@@ -39,6 +39,7 @@ yarn-error.log*
 .env.test.local
 .env.production
 .env.production.local
+.env.*.local
 # allow template only (no real keys)
 !.env.example
 

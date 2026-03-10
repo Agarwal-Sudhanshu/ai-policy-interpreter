@@ -16,9 +16,9 @@ export function PageHeader({
   action,
 }: PageHeaderProps) {
   return (
-    <div className="flex items-center justify-between gap-4">
+    <div className="flex flex-wrap items-center justify-between gap-4">
       <div className="min-w-0">
-        <h1 className="text-lg font-semibold text-gray-900">{title}</h1>
+        <h1 className="text-xl font-semibold text-gray-900">{title}</h1>
         {subtitle && (
           <p className="mt-1 text-sm text-gray-500">{subtitle}</p>
         )}
@@ -27,7 +27,7 @@ export function PageHeader({
         {back?.href && (
           <Link
             href={back.href}
-            className="text-sm font-medium text-gray-600 hover:text-gray-900"
+            className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
           >
             {back.label}
           </Link>

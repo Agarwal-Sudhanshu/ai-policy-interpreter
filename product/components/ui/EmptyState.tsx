@@ -15,7 +15,7 @@ export function EmptyState({
       className={`px-6 py-12 text-center text-sm text-gray-500 ${className}`}
     >
       <p>{message}</p>
-      {action && <div className="mt-3">{action}</div>}
+      {action && <div className="mt-4">{action}</div>}
     </div>
   );
 }

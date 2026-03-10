@@ -22,13 +22,13 @@ export function Header({ title, user }: HeaderProps) {
           <>
             <Link
               href="/login"
-              className="text-sm font-medium text-gray-600 hover:text-gray-900"
+              className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
             >
               Sign in
             </Link>
             <Link
               href="/signup"
-              className="rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
+              className="rounded-xl border border-gray-200 bg-[#2563EB] px-4 py-2 text-sm font-medium text-white hover:bg-[#1d4ed8] transition-colors"
             >
               Sign up
             </Link>

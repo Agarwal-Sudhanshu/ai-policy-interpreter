@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { AuthProvider } from "@/components/AuthProvider";
-import { AppShell } from "@/components/AppShell";
 import { SessionLoading } from "@/components/SessionLoading";
 import "./globals.css";
 
@@ -32,7 +31,7 @@ export default async function RootLayout({
       >
         <AuthProvider>
           <SessionLoading />
-          <AppShell>{children}</AppShell>
+          {children}
         </AuthProvider>
       </body>
     </html>
