@@ -1,0 +1,14 @@
+# Env and secrets (do not commit)
+.env
+.env.local
+.env.*.local
+
+# Debug / IDE artifacts
+.cursor/
+*.log
+
+# Keys and certs
+*.pem
+
+# OS
+.DS_Store
